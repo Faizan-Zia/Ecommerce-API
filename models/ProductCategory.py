@@ -6,4 +6,4 @@ from masoniteorm.models import Model
 class ProductCategory(Model):
     """ProductCategory Model"""
 
-    pass
+    __table__ = "productCategories"

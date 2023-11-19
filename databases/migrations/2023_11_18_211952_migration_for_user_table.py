@@ -10,8 +10,8 @@ class MigrationForUserTable(Migration):
         """
         with self.schema.create("users") as table:
             table.increments("id")
-            table.string("username")
-            table.string("email")
+            table.string("username").unique()
+            table.string("email").unique()
             table.string("hashed_password")
             table.string("phone_number", 11).nullable()
             table.text("address")
