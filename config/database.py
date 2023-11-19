@@ -18,8 +18,8 @@ DATABASES = {
     "host": "127.0.0.1",
     "driver": "postgres",
     "database": "ecommerce",
-    "user": "user",
-    "password": "user",
+    "user": "administer",
+    "password": "securepassword",
     "port": 5432,
     "log_queries": False,
     "options": {
