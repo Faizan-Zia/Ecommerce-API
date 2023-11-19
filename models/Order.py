@@ -1,7 +1,7 @@
 """ Order Model """
 
 from masoniteorm.models import Model
-
+from masoniteorm.relationships import has_many
 
 class Order(Model):
     """Order Model"""

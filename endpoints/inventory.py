@@ -29,7 +29,7 @@ async def add_product_category(category: schema.ProductCategory, current_user: U
 
     return new_category
 
-@router.post("/category/{category_id}", response_model=schema.ProductCategoryResult)
+@router.put("/category/{category_id}", response_model=schema.ProductCategoryResult)
 async def update_product_category(category_id: int, category: schema.ProductCategory, current_user: User = Depends(get_current_user)):
     updated_category = ProductCategory.find(category_id)
     if updated_category is None:
