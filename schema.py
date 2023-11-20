@@ -52,7 +52,7 @@ class ProductCategoryResult(ProductCategory):
 
 class Order(BaseModel):
     user_id: int
-    total_price: float
+    total_amount: float
 
 class OrderResult(Order):
     id: int
@@ -61,12 +61,14 @@ class OrderResult(Order):
 
 
 class OrderItems(BaseModel):
-    name: str
     product_id: int
     order_id: str
-    quantity: float
+    quantity: int
 
 class OrderItemsResult(OrderItems):
     id: int
     class Config:
       orm_mode = True
+class OrderItemCreate(BaseModel):
+    product_id: int
+    quantity: int

@@ -14,7 +14,5 @@
 
 service postgresql start
 masonite-orm migrate
-masonite-orm migrate:refresh
 
-export SECRET_KEY="StrongSecretKey"
 uvicorn main:app --host=0.0.0.0 --port=8000 --reload

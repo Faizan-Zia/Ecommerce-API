@@ -9,13 +9,12 @@ RUN service postgresql start &&\
   sudo -i -u postgres psql -c "create database ecommerce;" &&\
   sudo -i -u postgres psql -c "create user administer with encrypted password 'securepassword'; grant all privileges on database ecommerce to administer;" && service postgresql stop
 
-COPY . .
+COPY . /Ecommerce-API
+WORKDIR /Ecommerce-API
+
 RUN pip install -r requirements.txt
 RUN pip install httpx
 RUN pip install python-jose
 
-RUN git clone https://github.com/Faizan-Zia/Ecommerce-API.git
-
-WORKDIR Ecommerce-API
 
 ENTRYPOINT [ "bash /Ecommerce-API/script.sh" ] 
