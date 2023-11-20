@@ -15,6 +15,8 @@ WORKDIR /Ecommerce-API
 RUN pip install -r requirements.txt
 RUN pip install httpx
 RUN pip install python-jose
+RUN chmod +x /Ecommerce-API/script.sh
 
+EXPOSE 8000
 
-ENTRYPOINT [ "bash /Ecommerce-API/script.sh" ] 
+ENTRYPOINT [ "bash", "/Ecommerce-API/script.sh" ] 
