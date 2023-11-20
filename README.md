@@ -14,7 +14,7 @@ docker pull faizanzia1/ecommerce-backend
 
 Once pulled, run the container by using the following command:
 ```
-docker run -it -p 8000:8000 FaizanZia1/ecommerce-backend
+docker run -it -p 8000:8000 faizanzia1/ecommerce-backend
 ```
 
 You could also build the Dockerfile available at the root of the repository. Simply clone the repository and build the Dockerfile. You can use the following command for that:
